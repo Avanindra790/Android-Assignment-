@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="920dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/clear"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:onClick="clear"
+                android:shadowRadius="@integer/material_motion_duration_short_2"
+                android:text="@string/clear"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:layout_conversion_absoluteHeight="53dp"
+                tools:layout_conversion_absoluteWidth="88dp"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="491dp" />
+
+            <Button
+                android:id="@+id/buttonbrackets"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttonbrackets"
+                android:text="@string/brackets"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:layout_conversion_absoluteHeight="53dp"
+                tools:layout_conversion_absoluteWidth="88dp"
+                tools:layout_editor_absoluteX="105dp"
+                tools:layout_editor_absoluteY="491dp" />
+
+            <Button
+                android:id="@+id/buttonexponent"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:text="@string/exponent"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:layout_conversion_absoluteHeight="53dp"
+                tools:layout_conversion_absoluteWidth="88dp"
+                tools:layout_editor_absoluteX="209dp"
+                tools:layout_editor_absoluteY="491dp" />
+
+            <Button
+                android:id="@+id/buttondiv"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttondiv"
+                android:text="@string/divide"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:layout_conversion_absoluteHeight="53dp"
+                tools:layout_conversion_absoluteWidth="88dp"
+                tools:layout_editor_absoluteX="313dp"
+                tools:layout_editor_absoluteY="491dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout_conversion_absoluteHeight="53dp"
+                tools:layout_conversion_absoluteWidth="0dp"
+                tools:layout_editor_absoluteX="417dp"
+                tools:layout_editor_absoluteY="491dp">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonnine"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttonnine"
+                android:text="@string/nine"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttoneight"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttoneight"
+                android:text="@string/eight"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonseven"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttonseven"
+                android:text="@string/seven"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonmult"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttonmult"
+                android:text="@string/multiply"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonsix"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttonsix"
+                android:text="@string/six"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonfive"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttonfive"
+                android:text="@string/five"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonfour"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttonfour"
+                android:text="@string/four"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonplus"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttonplus"
+                android:text="@string/plus"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonthree"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttonthree"
+                android:text="@string/three"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttontwo"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttontwo"
+                android:text="@string/two"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonone"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttonone"
+                android:text="@string/one"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonminus"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttonminus"
+                android:text="@string/minus"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/squareroot"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="squareroot"
+                android:text="@string/squareroot"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonzero"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttonzero"
+                android:text="@string/zero"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttondecimal"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="buttondecimal"
+                android:text="@string/decimal"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonequal"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:onClick="buttonequal"
+                android:text="@string/equal"
+
+
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+        </TableRow>
+    </TableLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="-10dp" />
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="397dp"
+        android:layout_height="62dp"
+        android:autofillHints="false"
+        android:inputType="none"
+        android:text="@string/text"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.781"
+        tools:ignore="LabelFor" />
+
+    <ImageButton
+        android:id="@+id/backspace"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+        android:layout_width="91dp"
+        android:layout_height="38dp"
+        android:background="@drawable/circle"
+
+        android:backgroundTint="#EA1010"
+        android:onClick="backspace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.588"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        app:tint="#000000" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Developed by Avanindra Pratap Singh"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/text"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.436"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline2"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.123" />-->
+
+    <!--    <TextView-->
+<!--        android:id="@+id/textView2"-->
+<!--        android:layout_width="193dp"-->
+<!--        android:layout_height="29dp"-->
+<!--        android:text="@string/text2"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Body2"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.073"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.003" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

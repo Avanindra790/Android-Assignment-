@@ -1,0 +1,187 @@
+package com.example.calculator;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.icu.text.UFormat;
+import android.os.Bundle;
+import android.text.SpannableStringBuilder;
+import android.view.View;
+import android.widget.EditText;
+import org.mariuszgromada.math.mxparser.*;
+
+public class MainActivity extends AppCompatActivity {
+    private EditText text; //create the instance for the display
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        text=findViewById(R.id.text);
+        text.setShowSoftInputOnFocus(false); //this method will not open the keyboard
+        text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(getString(R.string.text).equals(text.getText().toString())){
+                    text.setText("");
+                }//deleting the default from the text this if method is being used
+
+            }
+        });
+    }
+    //updating the value
+    private void updateText(String strToAdd){
+        String oldstr=text.getText().toString();
+        //grabbing the cursor position
+        int cursorpos=text.getSelectionStart();
+        String leftstr= oldstr.substring(0,cursorpos);
+        String rightstr=oldstr.substring(cursorpos);
+        if(getString(R.string.text).equals(text.getText().toString())){
+            text.setText(strToAdd);
+            text.setSelection(cursorpos+1);
+
+        }
+        else{
+            text.setText(String.format("%s%s%s",leftstr,strToAdd,rightstr));
+            text.setSelection(cursorpos+1);
+        }
+
+    }
+    public void backspace(View view){
+        //logic for the backspace function
+        int cursorpos=text.getSelectionStart();
+        int textlen=text.getText().length();
+        if(cursorpos!=0 && textlen!=0){
+            SpannableStringBuilder selection=(SpannableStringBuilder) text.getText();
+            selection.replace(cursorpos-1,cursorpos,"");
+            text.setText(selection);
+            text.setSelection(cursorpos-1);
+        }
+
+    }
+    public void buttonzero(View view){
+        String s = "0";
+        updateText(s);
+
+    }public void buttonone(View view){
+        String s = "1";
+        updateText(s);
+
+    }
+
+    public void buttontwo(View view){
+        String s = "2";
+        updateText(s);
+
+    }
+    public void buttonthree(View view){
+        String s = "3";
+        updateText(s);
+
+    }
+    public void buttonfour(View view){
+        String s = "4";
+        updateText(s);
+
+    }
+    public void buttonfive(View view){
+        String s = "5";
+        updateText(s);
+
+    }
+    public void buttonsix(View view){
+        String s = "6";
+        updateText(s);
+
+    }
+    public void buttonseven(View view){
+        String s = "7";
+        updateText(s);
+
+    }
+    public void buttoneight(View view){
+        String s = "8";
+        updateText(s);
+
+    }
+    public void buttonnine(View view){
+        String s = "9";
+        updateText(s);
+
+    }
+    public void buttonplus(View view){
+        String s = "+";
+        updateText(s);
+
+    }
+    public void buttonminus(View view){
+        String s = "-";
+        updateText(s);
+
+    }
+    public void buttondiv(View view){
+        String s = "/";
+        updateText(s);
+
+    }
+    public void buttonmult(View view){
+        String s = "*";
+        updateText(s);
+
+    }
+    public void squareroot(View view){
+        String s="?";
+        updateText(s);
+
+    }
+    public void buttonequal(View view){
+        String userExp=text.getText().toString();
+        userExp=userExp.replaceAll("÷","/");
+        userExp=userExp.replaceAll("×","*");
+        Expression exp=new Expression(userExp);
+        String result=String.valueOf(exp.calculate());
+        text.setText(result);
+        text.setSelection(result.length());
+
+    }
+    public void buttonexponent(View view){
+        String s = "^";
+        updateText(s);
+
+    }
+    public void buttondecimal(View view){
+        String s = ".";
+        updateText(s);
+
+    }
+    public void buttonbrackets(View view){
+        int cursorpos=text.getSelectionStart();
+        int openpar=0;
+        int closedpar=0;
+        int textlen=text.getText().length();
+
+        for (int i = 0; i <cursorpos; i++) {
+            if(text.getText().toString().charAt(i) == '(') {
+                openpar = openpar + 1;}
+        if(text.getText().toString().charAt(i) == ')') {
+            closedpar = closedpar + 1;}}
+
+        if(openpar==closedpar || text.getText().toString().charAt(textlen - 1) == '('){
+            String s = "(";
+            updateText(s);
+            text.setSelection(cursorpos+1);
+        }
+        else if(closedpar<openpar && !(text.getText().toString().charAt(textlen - 1) == '(')){
+            String s = ")";
+            updateText(s);
+            text.setSelection(cursorpos+1);
+        }
+
+
+    }
+    public void clear(View view){
+        text.setText("");
+
+
+    }
+
+}
